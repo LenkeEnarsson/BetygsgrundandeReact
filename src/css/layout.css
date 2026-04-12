@@ -1,0 +1,314 @@
+html,
+body {
+    background-color: var(--MenuBackground);
+    background: linear-gradient(90deg, var(--MenuBackground) 10%, var(--FooterBackground) 90%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.GridLayout {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    min-width: 0;
+    min-height: 0;
+}
+
+.GridMenu {
+    background-color: var(--MenuBackground);
+    color: var(--MenuFontColor);
+    font-family: var(--MenuFont);
+    font-size: 1.3rem;
+    display: flex;
+    grid-area: Menu;
+}
+
+.MenuItem {
+    color: var(--MenuFontColor);
+    text-decoration: none;
+}
+
+.MenuItem:hover {
+    background-color: var(--ContentBackground);
+    border-radius: 100%;
+    transform: scale(1.06);
+}
+
+
+.activeMenu {
+    background-color: var(--FooterBackground);
+    color: var(--MenuFontColor);
+    border-radius: 100%;
+}
+
+.GridHeader {
+    grid-area: Header;
+    background-color: var(--HeaderBackground);
+    background: linear-gradient(148deg, var(--MenuBackground) 10%, var(--FooterBackground) 90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderTitle{
+    font-size: 25px;
+    padding-left: 0.5rem;
+    color: white;
+}
+
+.GridContent {
+    grid-area: Content;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    background-color: var(--ContentBackground);
+}
+
+.GridContent img {
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    background: linear-gradient(148deg, var(--FooterBackground) 0%, var(--HeaderBackground) 50%, var(--FooterBackground) 100%);
+    border-radius: 1.25rem;
+    font-family: var(--MenuFont);
+    text-align: center;
+    color: var(--MenuFontColor);
+    text-decoration: none;
+    background-color: var(--HeaderBackground);
+}
+button:hover{
+    transform: scale(1.06);
+}
+
+.Scrollview {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+.Scrollview img {
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.GridFooter {
+    background-color: var(--FooterBackground);
+    background: linear-gradient(148deg, var(--MenuBackground) 10%, var(--FooterBackground) 90%);
+    color: var(--MenuFontColor);
+    font-family: var(--MenuFont);
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: end;
+    align-items: center;
+    grid-area: Footer;
+    padding-right: 1rem;
+}
+
+.pageSearch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2rem;
+    box-sizing: border-box;
+}
+
+.Search {
+    display: flex;
+    height: 1.3rem;
+    align-self: center;
+    align-items: center;
+    gap: 0 0.5rem;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.searchBox {
+    flex: 1;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    min-width: 1.5rem;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    background-color: var(--ContentBackground);
+}
+
+.searchButton {
+    width: 2.5rem;
+    height: 1.3rem;
+    flex-shrink: 0;
+    display: inline-block;
+    margin: auto 0.5rem auto 0;
+}
+
+.pageNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--HeaderBackground);
+    height: 2rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.Paginator {
+    height: 1.3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.PaginatorChoice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--MenuFontColor);
+}
+
+.PaginatorChoice:hover {
+    background-color: var(--FooterBackground);
+    transform: scale(1.25);
+    border-radius: 50%;
+}
+
+.PageInfo{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--MenuFontColor);
+}
+
+/* Phone: */
+@media (max-width: 768px) {
+
+    .GridLayout {
+        grid-template-rows: 2rem minmax(0, 1fr) 2rem 1.5rem;
+        grid-template-areas:
+            'Header'
+            'Content'
+            'Menu'
+            'Footer';
+    }
+
+    .GridMenu {
+        background-color: var(--MenuBackground);
+        width: 100%;
+        align-items: last baseline;
+    }
+
+    .MenuWrap {
+        display: flex;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .MenuItem {
+        justify-content: space-between;
+        margin: 0 0 0.3rem 0;
+
+    }
+
+    .GridContent {
+        max-width: 100vw;
+    }
+
+    .GridContent, .Scrollview{
+    border-radius: 3rem 3rem 0rem 0rem;
+}
+
+    .pageNav {
+        padding: 0 0.3rem;
+    }
+
+    .GridFooter {
+        justify-content: center;
+    }
+}
+
+
+/* Larger than phone */
+@media (min-width: 768px) {
+
+    .GridLayout {
+        --MenuWidth: 2rem;
+        grid-template-rows: var(--MenuWidth) minmax(0, 1fr) 1.5rem;
+        grid-template-columns: 6rem 1fr;
+        grid-template-areas:
+            'Header Header'
+            'Menu Content'
+            'Footer Footer';
+    }
+
+    .MenuWrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem;
+        margin-bottom: 50rem;
+        align-items: center;
+    }
+
+    .MenuItem {
+        margin-bottom: 0.5rem;
+    }
+
+        .MenuItem:first-child{
+    margin-top: 1rem;
+}
+
+    .GridContent {
+        max-width: calc(100vw - var(--MenuWidth));
+    }
+
+    .Scrollview {
+        height: 100%;
+    }
+
+    .GridContent, .Scrollview{
+    border-radius: 3rem 0rem 0rem 0rem;
+}
+
+    .pageNav {
+        padding: 0 1rem;
+    }
+
+    .searchButton {
+        margin-right: 1rem;
+    }
+
+    .Paginator {
+        width: 15rem;
+    }
+
+}
+
+
+.Disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0%;
+}

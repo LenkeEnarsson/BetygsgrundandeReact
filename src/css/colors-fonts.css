@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
+
+:root {
+    --MenuBackground: #1D2A1D;
+    --ContentBackground: #3a463a;
+    --AltContentBackground2: #404c40;
+    --AltContentBackground: #BBD4B9;
+    --HeaderBackground: #1D2A1D;
+    --FooterBackground: #151515;
+    --TableTitleColor: #254025;
+    --TableRowColor: #617e61;
+    --TableRowColor2: #799c79;
+    --TableRowColor3: #9ec49e;
+    --MenuFontColor: #D8E4D6;
+}
+
+:root {
+    --MenuFont: 'Georgia', serif;
+}
+
+body {
+    font-family: var(--MenuFont) !important;
+}
+
+p {
+    margin: 5px;
+}
+
+.felipa-regular {
+    font-family: "Felipa", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.TitleName {
+    margin: unset;
+    margin-top: 3px;
+    padding: unset;
+    background: linear-gradient(0deg, var(--ContentBackground) 30%, var(--AltContentBackground) 50%, var(--ContentBackground) 70%);
+    border-radius: 50%;
+}

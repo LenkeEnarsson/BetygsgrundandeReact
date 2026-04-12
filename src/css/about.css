@@ -1,0 +1,13 @@
+.AboutInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.ProfileText {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0.5rem 0.8rem;
+}
+
+fieldset p {
+    text-align: start;
+}

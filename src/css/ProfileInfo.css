@@ -1,0 +1,97 @@
+.Scrollview{
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.Button {
+    height: 100%;
+}
+
+.Button:not(.searchButton){
+    margin: 4px 1rem;
+}
+
+.TitleName {
+    background: linear-gradient(148deg, var(--ContentBackground) 20%, var(--AltContentBackground) 50%, var(--ContentBackground) 80%);
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    font-size: 50px;
+}
+
+.ImgFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.Img {
+    height: auto;
+    width: 46%;
+    object-fit: cover;
+    border: 2px solid var(--MenuBackground);
+    border-radius: 1.2rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.ProfileText {
+    background-color: var(--TableRowColor);
+    border: 3px solid var(--MenuFontColor);
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+fieldset {
+    border: 2px solid var(--MenuFontColor);
+    border-radius: 1.25rem;
+    background-color: var(--TableRowColor2);
+    margin: 1rem 0rem 0rem 0rem;
+}
+.Field2nd{
+    background-color: var(--TableRowColor3);
+}
+
+legend {
+    border: 2px solid var(--MenuFontColor);
+    border-radius: 1.25rem;
+    background-color: var(--TableRowColor2);
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    margin: 0 auto;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.flexInfo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: unset;
+    margin: unset;
+}
+
+.flexDiv{
+    width: auto;
+    flex: 0 0 45%;
+}
+
+fieldset {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+@media (orientation: portrait) {
+    .Img {
+        width: 90%;
+    }
+
+    .flexDiv{
+        width: 100%;
+    }
+}
