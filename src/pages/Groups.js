@@ -71,7 +71,7 @@ return (
                             <p className="felipa-regular TitleName">{group.name}</p>
                             <p>{`*${group.establishedYear ?? 'Unknown'} ${group.strGenre ?? 'Unknown'}`}</p>
                             <p>{`${group.albums.length} album`}</p>
-                            <button onClick={onView} className="Button DetailsButton">Visa</button>
+                            <button onClick={onView} params={group.musicGroupId} className="Button DetailsButton">Visa</button>
                         </div>
                     </div>
                 ))}
