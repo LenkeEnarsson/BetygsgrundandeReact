@@ -4,24 +4,22 @@ import { fetchGroup } from '../services/APIService';
 import { useParams, useNavigate } from 'react-router';
 
 function Profileinfo() {
-    const {id} = useParams();
-
+    const { musicGroupId } = useParams();
     const [group, setGroup] = useState();
-    useEffect(
-        () => { 
-            async function loadGroup() {
-                const group = await fetchGroup(id)
-                setGroup(group);
-            }
-            loadGroup(id);
-        }, [id])
+
+    useEffect(() => {
+        fetchGroup(musicGroupId);
+        setGroup(group);
+
+    }, [musicGroupId, group]);
+
 
     return (
         <>
-        <div className="ImgFlex">
-            <img className="primaryPic" src="img/sabaton-jpg.jpg" alt=""></img>
-            <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
-        </div>
+            <div className="ImgFlex">
+                <img className="primaryPic" src="img/sabaton-jpg.jpg" alt=""></img>
+                <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
+            </div>
             <div className="TitleAndPics">
                 <button className="Button" onclick="history.back()">Tillbaka</button>
                 <img className="Primary Img" src="../img/sabaton-jpg.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>

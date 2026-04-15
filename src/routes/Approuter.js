@@ -16,7 +16,7 @@ function AppRouter() {
             <Route path="/" element={<Mainpage />}>
                 <Route index element={<About />} />
                 <Route path="groups" element={<Groups />} />
-                <Route path="profileinfo" element={<Profileinfo />} />
+                <Route path="profileinfo/:musicGroupId" element={<Profileinfo />} />
                 <Route path="form" element={<Form />} />
                 <Route path="*" element={<Error details= "Page not found"/>}/>
             </Route>
