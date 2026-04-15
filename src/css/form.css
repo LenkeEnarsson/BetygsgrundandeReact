@@ -9,17 +9,8 @@ body {
     font-family: sans-serif;
 }
 
-fieldset {
-    border-radius: 3px;
-    border: 1px solid #666;
-}
-
 .formContainer {
     padding: 10px;
-}
-
-fieldset+fieldset {
-    margin-top: 40px;
 }
 
 @media (min-width: 800px) {
@@ -96,21 +87,6 @@ fieldset+fieldset {
     padding: 3px;
     border-radius: 50%;
     background-color: var(--FooterBackground);
-}
-
-legend {
-    font-size: 1.3em;
-    padding: 3px 6px;
-    color: #fff;
-    background-color: var(--HeaderBackground);
-    margin-bottom: 10px;
-    border-radius: 2px;
-}
-
-legend span {
-    font-size: 0.8em;
-    opacity: 0.8;
-    display: inline-flex;
 }
 
 input:not([type="range"]):not(.searchBox), 

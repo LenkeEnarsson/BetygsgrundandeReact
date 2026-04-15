@@ -13,7 +13,7 @@
     padding: 0.15rem;
     flex: 1 1 10rem;
     height: 20rem;
-    min-width: 70%;
+    min-width: 100%;
     max-width: 100%;
     background: linear-gradient(0deg, var(--ContentBackground) 10%, var(--AltContentBackground) 39%, var(--ContentBackground) 75%);
     display: flex;
@@ -22,7 +22,6 @@
     color: var(--MenuFontColor);
     font-family: var(--MenuFont);
     color: var(--FooterBackground);
-
 }
 
 .TitleName{

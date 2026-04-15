@@ -44,25 +44,7 @@
     text-align: center;
 }
 
-fieldset {
-    border: 2px solid var(--MenuFontColor);
-    border-radius: 1.25rem;
-    background-color: var(--TableRowColor2);
-    margin: 1rem 0rem 0rem 0rem;
-}
-.Field2nd{
-    background-color: var(--TableRowColor3);
-}
 
-legend {
-    border: 2px solid var(--MenuFontColor);
-    border-radius: 1.25rem;
-    background-color: var(--TableRowColor2);
-    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
-    margin: 0 auto;
-    color: black;
-    font-size: 0.9rem;
-}
 
 .flexInfo{
     display: flex;
@@ -76,10 +58,6 @@ legend {
 .flexDiv{
     width: auto;
     flex: 0 0 45%;
-}
-
-fieldset {
-    font-size: 0.9rem;
 }
 
 p {

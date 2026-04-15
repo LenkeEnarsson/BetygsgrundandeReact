@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/profileinfo.css'
 import '../css/about.css'
 
 function About() {

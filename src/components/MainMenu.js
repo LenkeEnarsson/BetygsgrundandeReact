@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Mainmenu() {
     return (
@@ -11,9 +11,9 @@ function Mainmenu() {
             </div>
             <div className="GridMenu">
                 <div className="MenuWrap">
-                    <NavLink to="/" className="MenuItem">About</NavLink>
-                    <NavLink to="/groups" className="MenuItem">Grupper</NavLink>
-                    <NavLink to="/form" className="MenuItem">Form</NavLink>
+                    <Link to="../" className="MenuItem">Om</Link>
+                    <Link to="../groups" className="MenuItem">Grupper</Link>
+                    <Link to="../form" className="MenuItem">Formulär</Link>
                 </div>
             </div>
         </>
