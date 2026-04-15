@@ -93,7 +93,7 @@ function Form() {
                     </fieldset>
 
                     <div className="ButtonDiv">
-                        <button type="submit" className="Button ButtonText buttonCentered" id="submitButton" onClick={onClickRegister}>Registrera</button>
+                        <button className="Button ButtonText buttonCentered" onClick={onClickRegister}>Registrera</button>
                     </div>
                     <div className="FeedbackText"><p id="Feedback"></p></div>
                 </fieldset>

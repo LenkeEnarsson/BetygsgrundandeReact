@@ -7,12 +7,15 @@ function Profileinfo() {
     const { musicGroupId } = useParams();
     const [group, setGroup] = useState();
 
+    console.log(musicGroupId);
+
     useEffect(() => {
-        fetchGroup(musicGroupId);
-        setGroup(group);
-
-    }, [musicGroupId, group]);
-
+        const fetchGroupData = async () => {
+            const g = await fetchGroup(musicGroupId);
+            setGroup(g);
+        };
+        fetchGroupData();
+    }, [musicGroupId]);
 
     return (
         <>
@@ -21,7 +24,7 @@ function Profileinfo() {
                 <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
             </div>
             <div className="TitleAndPics">
-                <button className="Button" onclick="history.back()">Tillbaka</button>
+                <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
                 <img className="Primary Img" src="../img/sabaton-jpg.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
                 <img className="Primary Img" src="../img/Hellfest2017Sabaton_01.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
 

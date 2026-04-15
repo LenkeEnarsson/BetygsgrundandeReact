@@ -7,7 +7,7 @@ export function PageSearch() {
                 <div className="pageSearch">
                 <div className="Search">
                     <input className="searchBox" type="text" id="searchInput" placeholder="Sök..."></input>
-                    <button className="Button searchButton ButtonText" on>Sök</button>
+                    <button className="Button searchButton ButtonText">Sök</button>
                 </div>
             </div>
     </>

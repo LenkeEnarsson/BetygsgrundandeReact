@@ -40,7 +40,7 @@ export async function fetchGroups(pageNr) {
 }
 
 export async function fetchGroup(id) {
-    const url = `${urlAPI}https://music.api.public.seido.se/api/MusicGroups/ReadItem?id=${id}&flat=false`;
+    const url = `${urlAPI}MusicGroups/ReadItem?id=${id}&flat=false`;
     const response = await myFetch(url, 'GET');
     return await response;
 }
