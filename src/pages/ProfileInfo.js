@@ -22,12 +22,10 @@ function Profileinfo() {
                     <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
                     <div className="felipa-regular TitleName">Hello{group.name}</div>
                     <div className="ImgFlex">
-                        <img className="primaryPic" src="img/sabaton-jpg.jpg" alt=""></img>
-                        <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
-                    </div>
-                </div>
                 <img className="Primary Img" src="../img/sabaton-jpg.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
                 <img className="Primary Img" src="../img/Hellfest2017Sabaton_01.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
+                    </div>
+                </div>
 
             </>
             : <></>
