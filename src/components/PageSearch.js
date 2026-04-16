@@ -15,3 +15,16 @@ export function PageSearch() {
 }
 
 export default PageSearch
+
+/*
+const btn = document.querySelector('.searchButton');
+let searchWord = '';
+
+btn.addEventListener('click', async () => {
+    const searchBox = document.querySelector('.searchBox');
+    searchWord = searchBox.value;
+    savedFilter = searchWord;
+    document.querySelector('#GroupsList').innerHTML = '';
+    loadGroups(true);
+})
+*/
