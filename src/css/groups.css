@@ -24,8 +24,7 @@
     color: var(--FooterBackground);
 }
 
-.TitleName{
-    background: unset;
+.TitleNameGroups{
     display: flex;
     justify-content: center;
     font-size: 40px;

@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import '../css/profileinfo.css'
 import { fetchGroup } from '../services/APIService';
 import { useParams, useNavigate } from 'react-router';
+import '../css/profileinfo.css'
 
 function Profileinfo() {
     const { musicGroupId } = useParams();
     const [group, setGroup] = useState();
-
-    console.log(musicGroupId);
 
     useEffect(() => {
         const fetchGroupData = async () => {
@@ -18,21 +16,23 @@ function Profileinfo() {
     }, [musicGroupId]);
 
     return (
-        <>
-            <div className="ImgFlex">
-                <img className="primaryPic" src="img/sabaton-jpg.jpg" alt=""></img>
-                <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
-            </div>
-            <div className="TitleAndPics">
-                <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
+        group ?
+            <>
+                <div className="TitleAndPics">
+                    <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
+                    <div className="felipa-regular TitleName">Hello{group.name}</div>
+                    <div className="ImgFlex">
+                        <img className="primaryPic" src="img/sabaton-jpg.jpg" alt=""></img>
+                        <img className="secondaryPic" src="img/Hellfest2017Sabaton_01.jpg" alt=""></img>
+                    </div>
+                </div>
                 <img className="Primary Img" src="../img/sabaton-jpg.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
                 <img className="Primary Img" src="../img/Hellfest2017Sabaton_01.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
 
-            </div>
-        </>
+            </>
+            : <></>
     )
     /*
-    <div className="felipa-regular TitleName">{response.item.name}</div>
     
     const pics = document.createElement("div");
     pics.classList.add("ImgFlex");

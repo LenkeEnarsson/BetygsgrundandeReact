@@ -46,7 +46,6 @@ function Groups() {
     }
 
     const onView = (e) => {
-        console.log(e.target.dataset.id);
         const musicGroupId = e.target.dataset.id;
         navigate(`../profileinfo/${musicGroupId}`);
     }
@@ -69,8 +68,8 @@ return (
                     <div key={group.musicGroupId} className='FlexboxAlbumItem'>
                         <img src={imageNotInAPI} alt="" />
                         <div className='FlexBoxItemText'>
-                            <p className="felipa-regular TitleName">{group.name}</p>
-                            <p>{`*${group.establishedYear ?? 'Unknown'} ${group.strGenre ?? 'Unknown'}`}</p>
+                            <p className="felipa-regular TitleNameGroups">{group.name}</p>
+                            <p>{group.establishedYear ?? 'Unknown'}, {group.strGenre ?? 'Unknown'}</p>
                             <p>{`${group.albums.length} album`}</p>
                             <button onClick={onView} data-id={group.musicGroupId} className="Button DetailsButton">Visa</button>
                         </div>
