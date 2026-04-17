@@ -8,9 +8,6 @@ import { fetchFilteredGroups, fetchGroups } from "../services/APIService";
 import { Link } from 'react-router'
 import Loader from '../components/Loader';
 
-const params = new URLSearchParams(window.location.search);
-const pageNr = params.get("pageNr");
-
 function Groups() {
     const navigate = useNavigate();
     const [groups, setGroups] = useState([]);
@@ -35,8 +32,8 @@ function Groups() {
         setTotalGroups(response.dbItemsCount);
     };
 
-    const handleSearch = (searchTerm) => {
-        setFilter(searchTerm);
+    const handleSearch = (searchWord) => {
+        setFilter(searchWord);
         setCurrentPage(0);
     }
     

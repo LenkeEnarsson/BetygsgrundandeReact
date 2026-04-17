@@ -7,7 +7,7 @@ const feedBack = document.querySelector('#Feedback');
 const formGroup = document.querySelector("#AddGroup");
 
 /*
-onClickRegister("submit", async(e) => {e.preventDefault(); 
+function onClickRegister("submit", async(e) => {e.preventDefault(); 
     try{
     await RegisterGroup(); 
     feedBack.innerHTML = "Registreringen lyckades!";
@@ -18,6 +18,7 @@ onClickRegister("submit", async(e) => {e.preventDefault();
     }
 });
 */
+
 async function RegisterGroup() {
 
     const nameInput = document.querySelector("#bandName").value;
@@ -37,7 +38,7 @@ async function RegisterGroup() {
         return;
     }
     const group = { name: nameInput, establishedYear: yob, genre: genreInput };
-    
+
     console.log(group);
     await postGroup(group);
 }

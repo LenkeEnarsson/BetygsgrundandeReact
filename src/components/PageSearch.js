@@ -1,13 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router'
+import { React, useState } from 'react'
 
-export function PageSearch() {
+export function PageSearch({ onSearch }) {
+  const [searchWord, setSearchWord] = useState('');
+
+  const onSearchClick = async(e) => {
+    e.preventDefault();
+    onSearch(searchWord);
+  }
+
   return (
     <>
                 <div className="pageSearch">
                 <div className="Search">
-                    <input className="searchBox" type="text" id="searchInput" placeholder="Sök..."></input>
-                    <button className="Button searchButton ButtonText">Sök</button>
+                    <input className="searchBox" type="text" value={searchWord} onChange={(e) => setSearchWord(e.target.value)}  placeholder="Sök..."></input>
+                    <button className="Button searchButton ButtonText" onClick={onSearchClick}>Sök</button>
                 </div>
             </div>
     </>
@@ -15,16 +21,3 @@ export function PageSearch() {
 }
 
 export default PageSearch
-
-/*
-const btn = document.querySelector('.searchButton');
-let searchWord = '';
-
-btn.addEventListener('click', async () => {
-    const searchBox = document.querySelector('.searchBox');
-    searchWord = searchBox.value;
-    savedFilter = searchWord;
-    document.querySelector('#GroupsList').innerHTML = '';
-    loadGroups(true);
-})
-*/
