@@ -12,8 +12,6 @@ async function myFetch(url, method = null, body = null) {
 
         if (res.ok) {
 
-            //console.log(`\n${method} Request successful @ ${url}`);
-
             //get the data from server
             let data = await res.json();
             return data;    
@@ -21,14 +19,12 @@ async function myFetch(url, method = null, body = null) {
         else {
 
             //typcially you would log an error instead
-            //console.log(`Failed to recieved data from server: ${res.status} - ${res.statusText}`);
             alert(`Failed to recieved data from server: ${res.status} - ${res.statusText}}`);
         }
     }
     catch (err) {
 
         //typcially you would log an error instead
-        //console.log(`Failed to recieved data from server: ${err.message}`);
         alert(`Failed to recieved data from server: ${err.message}`);
     }
 }
@@ -68,10 +64,6 @@ export async function postGroup(group = { name: "Okänt Namn", establishedYear: 
         "albumsId": [],
         "artistsId": []
     };
-
-    console.log(url, newItem);
-
     const response = await myFetch(url, 'POST', newItem);
-    console.log(response);
     return await response;
 }
