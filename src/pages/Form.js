@@ -37,19 +37,14 @@ async function RegisterGroup() {
         return;
     }
     const group = { name: nameInput, establishedYear: yob, genre: genreInput };
-
+    
+    console.log(group);
     await postGroup(group);
 }
 
 
 function Form() {
-
-
-    const onClickRegister = e => {
-        console.log('Registry button clicked, notImplementedYet')
-    };
-    /*
-    {() => async(e) => {e.preventDefault(); 
+    const onClickRegister = () => async(e) => {e.preventDefault(); 
     try{
     await RegisterGroup(); 
     feedBack.innerHTML = "Registreringen lyckades!";
@@ -58,8 +53,8 @@ function Form() {
     catch (err){
         feedBack.innerHTML = `Registreringen misslyckades: ${err}`
     }
-});}
-*/
+
+}
 
     return (
         <>

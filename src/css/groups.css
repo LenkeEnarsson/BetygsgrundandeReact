@@ -10,7 +10,8 @@
 }
 
 .FlexboxAlbumItem{
-    padding: 0.15rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     flex: 1 1 10rem;
     height: 20rem;
     min-width: 100%;
@@ -32,7 +33,7 @@
 
 @media (orientation: portrait){
     .FlexboxAlbumItem{
-        min-width: 50%;
+        min-width: 70%;
     }
 }
 

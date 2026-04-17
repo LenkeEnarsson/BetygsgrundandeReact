@@ -34,7 +34,7 @@ async function myFetch(url, method = null, body = null) {
 }
 
 export async function fetchGroups(pageNr) {
-    const url = `${urlAPI}MusicGroups/Read?seeded=true&flat=false&pageNr=${pageNr}&pageSize=10`;
+    const url = `${urlAPI}MusicGroups/Read?seeded=false&flat=false&pageNr=${pageNr}&pageSize=10`;
     const response = await myFetch(url, 'GET');
     return await response;
 }
@@ -68,6 +68,9 @@ export async function postGroup(group = { name: "Okänt Namn", establishedYear: 
         "artistsId": []
     };
 
+    console.log(url, newItem);
+
     const response = await myFetch(url, 'POST', newItem);
     return await response;
+    console.log(response);
 }

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     background-color: var(--MenuBackground);
@@ -157,14 +161,15 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--HeaderBackground);
     height: 2rem;
     padding: 0 1rem;
     box-sizing: border-box;
+    border: solid var(--MenuFontColor);
+    border-radius: 1rem;
 }
 
 .Paginator {
-    height: 1.3rem;
+    height: 1.2rem;
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -176,7 +181,7 @@ button:hover{
     align-items: center;
     justify-content: center;
     height: 100%;
-    font-size: 20px;
+    font-size: 15px;
     box-sizing: border-box;
     text-decoration: none;
     color: var(--MenuFontColor);
@@ -185,7 +190,6 @@ button:hover{
 .PaginatorChoice:hover {
     background-color: var(--FooterBackground);
     transform: scale(1.25);
-    border-radius: 50%;
 }
 
 .PageInfo{

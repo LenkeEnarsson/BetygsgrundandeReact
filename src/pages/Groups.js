@@ -13,7 +13,7 @@ const pageNr = params.get("pageNr");
 
 function Groups() {
     const navigate = useNavigate();
-    const [groups, setGroups] = useState([]); //is this response?
+    const [groups, setGroups] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [maxPage, setMaxPage] = useState(0);
     const [totalGroups, setTotalGroups] = useState(0);
@@ -41,8 +41,7 @@ function Groups() {
     }
     
     const handlePageChange = (newPage) => {
-        if (newPage >= 0 && newPage <= maxPage)
-            setCurrentPage(newPage);
+        setCurrentPage(newPage);
     }
 
     const onView = (e) => {
@@ -57,7 +56,7 @@ return (
     groups.length === 0 ? <p>Inga resultat att visa</p> :
     <div className="FlexboxAlbum" id="GroupsList">
                 <PageSearch onSearch={handleSearch} />
-                <Paginator />
+                <Paginator onPageChange={handlePageChange} current={currentPage} max={maxPage} totalGroups={totalGroups}/>
                 {groups.map(group =>
                 (   
                     <div key={group.musicGroupId} className='FlexboxAlbumItem'>
@@ -70,7 +69,7 @@ return (
                         </div>
                     </div>
                 ))}
-                <Paginator />
+                <Paginator onPageChange={handlePageChange} current={currentPage} max={maxPage} totalGroups={totalGroups}/>
             </div>
     );
 }
