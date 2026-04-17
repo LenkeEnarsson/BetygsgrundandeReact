@@ -51,8 +51,9 @@ export async function fetchInfo() {
     return await response;
 }
 
+//API-filtret buggigt utifrån uppgiftens krav. Filtret sorterar inte endast på musikgruppernas namn. (Testa sök på "Rock")
 export async function fetchFilteredGroups(searchWord, pageNr) {
-    const url = `${urlAPI}MusicGroups/Read?seeded=true&flat=false&filter=${searchWord}&pageNr=${pageNr}&pageSize=10`
+    const url = `${urlAPI}MusicGroups/Read?seeded=false&flat=false&filter=${searchWord}&pageNr=${pageNr}&pageSize=10`
     const response = await myFetch(url, 'GET');
     return await response;
 }
@@ -71,6 +72,6 @@ export async function postGroup(group = { name: "Okänt Namn", establishedYear: 
     console.log(url, newItem);
 
     const response = await myFetch(url, 'POST', newItem);
-    return await response;
     console.log(response);
+    return await response;
 }

@@ -10,7 +10,10 @@ function About() {
                     <strong>Tai Lenke Enarsson, Teknikhögskolan, Webbutveckling frontend React, Individuell
                         Inlämnigsuppgift</strong>
                 </p>
-
+                <fieldset>
+                    <legend><strong>React</strong></legend>
+                        Obs: Sök-filtret i API är buggigt utifrån uppgiftens krav. (Sök exempelvis på "Rock")
+                </fieldset>
                 <fieldset>
                     <legend><strong>JavaScript</strong></legend>
                     <fieldset className="Field2nd">

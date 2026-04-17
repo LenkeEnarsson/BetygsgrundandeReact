@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { fetchGroup } from '../services/APIService';
-import { useParams, useNavigate } from 'react-router';
+import { useParams } from 'react-router';
 import '../css/profileinfo.css'
 
 function Profileinfo() {

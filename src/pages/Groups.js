@@ -1,12 +1,10 @@
 
-import React, { use, useEffect, useState } from 'react'
-import { Outlet, useParams, useNavigate, useOutletContext } from 'react-router';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router';
 import '../css/groups.css'
 import PageSearch from '../components/PageSearch.js';
 import Paginator from '../components/Paginator.js';
 import { fetchFilteredGroups, fetchGroups } from "../services/APIService";
-import { Link } from 'react-router'
-import Loader from '../components/Loader';
 
 function Groups() {
     const navigate = useNavigate();
