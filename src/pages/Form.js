@@ -4,6 +4,7 @@ import { postGroup } from "../services/APIService.js";
 
 function Form() {
     const [name, setName] = useState('');
+    const [errorName, setErrorName] = useState('');
     const [yob, setYoB] = useState(0);
     const [genre, setGenre] = useState(-1);
     const [feedback, setFeedback] = useState('');

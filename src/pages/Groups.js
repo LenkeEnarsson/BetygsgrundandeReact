@@ -48,7 +48,7 @@ function Groups() {
 const imageNotInAPI = './img/sabaton-jpg.jpg';
 
 return (
-    groups.length === 0 ? <p>Inga resultat att visa</p> :
+    groups.length === 0 ? <p className="MenuItem">Inga resultat att visa</p> :
     <div className="FlexboxAlbum" id="GroupsList">
                 <PageSearch onSearch={handleSearch} />
                 <Paginator onPageChange={handlePageChange} current={currentPage} max={maxPage} totalGroups={totalGroups}/>

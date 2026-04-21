@@ -12,33 +12,72 @@ function About() {
                 </p>
                 <fieldset>
                     <legend><strong>React</strong></legend>
-                        Obs: Sök-filtret i API är buggigt utifrån uppgiftens krav. (Sök exempelvis på "Rock")
+                    <p><strong>Obs: Sök-filtret i API är buggigt utifrån uppgiftens krav. (Sök exempelvis på "Rock")</strong>
+
+                        Bakgrund:
+                        Din uppgift är att bygga vidare på den statiska webbsidan du gjorde i inlämningsuppgift B
+                        och göra den dynamisk med React. Sidorna ska vara responsiva så äldre taggar som 'table'
+                        accepteras inte. All kod ska skrivas i ReactJS och JSX. Du ska bygga upp applikationen genom
+                        att skapa React komponenter
+                        Vill du inte bygga vidare på din inlämningsuppgift B så får du använda bootstrap eller delar
+                        av UITemplates som du anpassar till din applikation.
+                        Uppgiften ska använda, react, och får även använda react-router-dom, react-bootstrap,
+                        react-router-bootstrap, react-bootstrap-icon. All kod ska skrivas i ReactJS och JSX. Du ska
+                        bygga upp applikationen genom att skapa React komponenter</p>
+                    <fieldset className="Field2nd">
+                        <legend className="Field2nd">G-nivå</legend>
+                        <p><s>En Webbapplikation i react ska ha nedan innehåll
+                            - En meny för att välja nedan två sidor
+                            - En hemma sida som presenterar namnet på applikationen och ditt namn som
+                            utvecklare.
+                            - En list sida som listar musikgrupperna i wepapi;n. Listan ska vara indelad i listsidor
+                            (pagination), där varje listsida ska visa 10 rader. Varje rad i listan ska presentera en
+                            musikgrupp med dess namn, genre, etableringsår, och antal släppta album samt en
+                            knapp som visar detaljer.
+                            - Man ska kunna klicka sig fram och tillbaka i listsidorna.
+                            - En sida som presenterar den valda musikgruppen med namn, genre, etableringsår, lista
+                            på artister i gruppen och en lista på album som gruppen släppt</s></p>
+                    </fieldset>
+                    <fieldset className="Field2nd">
+                        <legend className="Field2nd">VG-nivå</legend>
+                        <p><s>- Inlämningsuppgift enligt G nivå.
+                            - Sidan som listar musikgrupper även innehålla ett sökord med en sökknapp. Om man t
+                            ex. skriver in ” Led” så ska list sidan med dess listsidor enbart presentera musikgrupper
+                            vars namn innehåller order ”Led”. Totala antalet musikgrupper som matchar sökvillkoret
+                            ska också visas på sidan. Genom att klicka sig igenom listsidorna så ska man kunna se alla
+                            musikgrupper som matchar resultatet.
+                            - Varje rad i listan ska innehålla en knapp som om man klickar på öppnar en detalj sida.
+                            - Detalj sidan ska presentera musikgruppen med dess namn, genre, etableringsår, lista på
+                            artister i gruppen och en lista på album som gruppen släppt.
+                            - En sida med formulär lägger till en ny musikgrupp genom att ange dess namn, genre,
+                            etableringsår. Sidan ska ha inputvalidering.</s></p>
+                    </fieldset>
                 </fieldset>
                 <fieldset>
                     <legend><strong>JavaScript</strong></legend>
                     <fieldset className="Field2nd">
                         <legend className="Field2nd">G-nivå</legend>
-                        <p>
+                        <p><s>
                             En Webbapplikation i HTML-CSS-Javascript ska ha nedan innehåll
                             - <s>En meny för att välja nedan två sidor</s>
-                            - <s>En hemma sida som presenterar namnet på applikationen och ditt namn som
-                                utvecklare.</s>
-                            - <s>En list sida som listar musikgrupperna i wepapi;n. Listan ska vara indelad i
-                                listsidor
-                                (pagination), där varje listsida ska visa 10 rader. Varje rad i listan ska
-                                presentera en
-                                musikgrupp med dess namn, genre, etableringsår, och antal släppta album samt en
-                                knapp som visar detaljer.</s>
-                            - <s>Man ska kunna klicka sig fram och tillbaka i listsidorna.</s>
-                            - <s>En sida som presenterar den valda musikgruppen med namn, genre, etableringsår,
-                                lista
-                                på artister i gruppen och en lista på album som gruppen släppt.</s>
+                            - En hemma sida som presenterar namnet på applikationen och ditt namn som
+                            utvecklare.
+                            - En list sida som listar musikgrupperna i wepapi;n. Listan ska vara indelad i
+                            listsidor
+                            (pagination), där varje listsida ska visa 10 rader. Varje rad i listan ska
+                            presentera en
+                            musikgrupp med dess namn, genre, etableringsår, och antal släppta album samt en
+                            knapp som visar detaljer.
+                            - Man ska kunna klicka sig fram och tillbaka i listsidorna.
+                            - En sida som presenterar den valda musikgruppen med namn, genre, etableringsår,
+                            lista
+                            på artister i gruppen och en lista på album som gruppen släppt.</s>
                         </p>
                     </fieldset>
                     <fieldset className="Field2nd">
                         <legend className="Field2nd">VG-nivå</legend>
                         <p>
-                            <s>Inlämningsuppgift enligt G nivå.</s>
+                            Inlämningsuppgift enligt G nivå.
                             <s>
                                 - Sidan som listar musikgrupper även innehålla ett sökord med en sökknapp. Om man t
                                 ex. skriver in ” Led” så ska list sidan med dess listsidor enbart presentera
@@ -88,7 +127,7 @@ function About() {
                         </s></p>
                     </fieldset>
                 </fieldset>
-            </div>
+            </div >
         </>
     )
 }
