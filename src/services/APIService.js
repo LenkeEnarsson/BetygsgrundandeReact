@@ -1,3 +1,5 @@
+import Loader from "../components/Loader";
+
 const urlAPI = 'https://music.api.public.seido.se/api/';
 
 async function myFetch(url, method = null, body = null) {

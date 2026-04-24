@@ -19,8 +19,8 @@ function Profileinfo() {
         group ?
             <>
                 <div className="TitleAndPics">
-                    <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
                     <div className="felipa-regular TitleName">  {group.name}</div>
+                    <button className="Button" onClick={() => window.history.back()}>Tillbaka</button>
                     <div className="ImgFlex">
                         <img className="Primary Img" src="../img/sabaton-jpg.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
                         <img className="Primary Img" src="../img/Hellfest2017Sabaton_01.jpg" alt="">{/*Images are not part of MusicGroupsAPI*/}</img>
